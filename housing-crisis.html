@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Operational briefing website on New York City's housing crisis, affected populations, inventory issues, and recommended fixes.">
+  <title>NYC Housing Crisis Operations Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="housing-crisis.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview">NYC Housing Ops</a>
+    <nav aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#fixes">Fixes</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-image" role="img" aria-label="New York City apartment buildings and skyline at dusk"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Operational briefing</p>
+        <h1>New York City Housing Crisis</h1>
+        <p class="lede">
+          A single working view of the root causes, impacted residents, inventory pressure, and practical actions that can move households into homes faster.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#fixes">View operational fixes</a>
+          <a class="button secondary" href="#analysis">Review evidence</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-band" aria-label="Key housing indicators">
+      <article>
+        <span>Rental vacancy</span>
+        <strong>1.41%</strong>
+        <p>2023 citywide net rental vacancy rate.</p>
+      </article>
+      <article>
+        <span>Available rentals</span>
+        <strong>33,210</strong>
+        <p>Units available across more than 2.3M rental units.</p>
+      </article>
+      <article>
+        <span>Low-rent availability</span>
+        <strong>&lt;1%</strong>
+        <p>Vacancy for low- and moderate-rent units.</p>
+      </article>
+      <article>
+        <span>Students homeless</span>
+        <strong>154K+</strong>
+        <p>NYC students in temporary housing in 2024-25.</p>
+      </article>
+    </section>
+
+    <section class="brief-grid" aria-label="Executive summary">
+      <div>
+        <p class="eyebrow">Root cause</p>
+        <h2>Demand recovered faster than the city could produce, preserve, and lease affordable homes.</h2>
+      </div>
+      <p>
+        The crisis is not one single failure. It is a tight-supply market, restrictive land-use history, high construction costs, deep affordability gaps, and slow administrative pipelines meeting a population that still needs New York to function as home.
+      </p>
+    </section>
+
+    <section class="project-description" aria-label="Project description">
+      <div class="section-head">
+        <p class="eyebrow">Project context</p>
+        <h2>What this project is</h2>
+      </div>
+      <div class="description-grid">
+        <article>
+          <h3>What</h3>
+          <p>This is a research-based briefing website about New York City's housing crisis. It organizes the issue into root causes, affected populations, inventory constraints, and operational fixes.</p>
+        </article>
+        <article>
+          <h3>Why</h3>
+          <p>It was built to turn a complex public-policy problem into a clear working page that students, residents, advocates, and decision-makers can scan quickly and use for discussion or planning.</p>
+        </article>
+        <article>
+          <h3>How</h3>
+          <p>The page was built with plain HTML, CSS, and JavaScript. The content is based on public sources including NYC HPD, NYC Comptroller, NYC Council, NYS Comptroller, and Advocates for Children.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="analysis" id="analysis">
+      <div class="section-head">
+        <p class="eyebrow">Analysis workspace</p>
+        <h2>Four tasks, one operating picture</h2>
+      </div>
+
+      <div class="tab-controls" role="tablist" aria-label="Housing analysis categories">
+        <button class="tab-button is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-causes" id="tab-causes" data-tab="causes">Root Causes</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-population" id="tab-population" data-tab="population">Impacted Population</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-inventory" id="tab-inventory" data-tab="inventory">Inventory Issues</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-fixes" id="tab-fixes" data-tab="fixes">Operational Fixes</button>
+      </div>
+
+      <div class="tab-panels">
+        <section class="tab-panel is-active" id="panel-causes" role="tabpanel" aria-labelledby="tab-causes" data-panel="causes">
+          <div class="panel-copy">
+            <h3>Primary drivers</h3>
+            <p>Housing production has lagged job growth and household demand, while older zoning limited where multifamily housing, ADUs, conversions, and transit-adjacent density could happen.</p>
+          </div>
+          <ul class="finding-list">
+            <li><strong>Underproduction:</strong> not enough new homes to rebalance vacancy.</li>
+            <li><strong>Affordability mismatch:</strong> new supply often misses the lowest-income renters.</li>
+            <li><strong>Cost stack:</strong> financing, insurance, labor, materials, and operations raise rents and subsidy needs.</li>
+            <li><strong>Process drag:</strong> permits, inspections, subsidy approvals, and lease-up reviews slow delivery.</li>
+          </ul>
+        </section>
+
+        <section class="tab-panel" id="panel-population" role="tabpanel" aria-labelledby="tab-population" data-panel="population" hidden>
+          <div class="panel-copy">
+            <h3>Who feels it first</h3>
+            <p>Low-income renters, families with children, shelter residents, seniors, people with disabilities, immigrants, and Black and Latino households carry the most acute burden.</p>
+          </div>
+          <ul class="finding-list">
+            <li><strong>Rent burden:</strong> low-income renters without means-tested support face severe rent-to-income pressure.</li>
+            <li><strong>Children:</strong> more than 154,000 students experienced homelessness in 2024-25.</li>
+            <li><strong>Shelter pressure:</strong> the citywide shelter census rose sharply from 2022 to 2025.</li>
+            <li><strong>Geography:</strong> high student homelessness clusters in the Bronx, upper Manhattan, parts of Brooklyn, and southwest Queens.</li>
+          </ul>
+        </section>
+
+        <section class="tab-panel" id="panel-inventory" role="tabpanel" aria-labelledby="tab-inventory" data-panel="inventory" hidden>
+          <div class="panel-copy">
+            <h3>Inventory is tighter than the headline count</h3>
+            <p>Available, affordable, move-in-ready inventory is the true constraint. Some homes exist on paper but are delayed by repairs, approvals, lottery batching, voucher checks, or temporary certificate timing.</p>
+          </div>
+          <ul class="finding-list">
+            <li><strong>Vacancy:</strong> citywide rental vacancy was 1.41% in 2023.</li>
+            <li><strong>Stabilized units:</strong> rent-stabilized vacancy was under 1%.</li>
+            <li><strong>Pipeline risk:</strong> falling permits can weaken future supply.</li>
+            <li><strong>Lease-up friction:</strong> one Bronx case study took 27 months to lease 180 affordable apartments.</li>
+          </ul>
+        </section>
+
+        <section class="tab-panel" id="panel-fixes" role="tabpanel" aria-labelledby="tab-fixes" data-panel="fixes" hidden>
+          <div class="panel-copy">
+            <h3>Near-term operating moves</h3>
+            <p>The city needs more homes, but the fastest wins come from shortening the time between available unit, qualified household, voucher approval, lease signing, and move-in.</p>
+          </div>
+          <ul class="finding-list">
+            <li><strong>Dashboard:</strong> track every subsidized unit by stage and days stuck.</li>
+            <li><strong>Parallel processing:</strong> run voucher and Housing Connect eligibility at the same time.</li>
+            <li><strong>Documentation reuse:</strong> reduce duplicate pay stubs, tax forms, and agency rechecks.</li>
+            <li><strong>Repair triage:</strong> fund fast rehab of vacant rent-stabilized and public units.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="operations" id="fixes">
+      <div class="section-head">
+        <p class="eyebrow">Recommended fixes</p>
+        <h2>Operational roadmap</h2>
+      </div>
+
+      <div class="roadmap">
+        <article>
+          <span>01</span>
+          <h3>Stand up a housing delivery dashboard</h3>
+          <p>Track each affordable unit from financing through permit, construction, TCO, lottery, voucher approval, lease, and move-in.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Set public service-level targets</h3>
+          <p>Publish maximum review times for marketing approvals, applicant files, inspections, appeals, and rent-payment starts.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Process eligibility in parallel</h3>
+          <p>Let CityFHEPS, Housing Connect, property-manager income checks, and document review move together instead of sequentially.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Create a move-in-ready command list</h3>
+          <p>Prioritize vacant affordable, supportive, NYCHA, and voucher-eligible units that can be occupied within 30 days.</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h3>Fast-track small preservation repairs</h3>
+          <p>Use targeted grants or low-cost capital to return vacant stabilized and public units to safe occupancy.</p>
+        </article>
+        <article>
+          <span>06</span>
+          <h3>Measure exits, not just capacity</h3>
+          <p>Evaluate agencies on permanent placements, voucher utilization, days-to-lease, and returns to shelter.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="source-section" id="sources">
+      <div class="section-head">
+        <p class="eyebrow">Evidence base</p>
+        <h2>Key sources used</h2>
+      </div>
+      <div class="source-list">
+        <a href="https://www.nyc.gov/assets/hpd/downloads/pdfs/about/2023-nychvs-selected-initial-findings.pdf" target="_blank" rel="noreferrer">NYC HPD: 2023 Housing and Vacancy Survey</a>
+        <a href="https://www.nyc.gov/content/tenantprotection/pages/fast-facts-about-housing-in-nyc" target="_blank" rel="noreferrer">NYC Tenant Protection Cabinet: Fast Facts</a>
+        <a href="https://comptroller.nyc.gov/reports/spotlight-new-york-citys-housing-supply-challenge/" target="_blank" rel="noreferrer">NYC Comptroller: Housing Supply Challenge</a>
+        <a href="https://www.osc.ny.gov/press/releases/2025/03/dinapoli-nycs-solid-housing-growth-risk-permits-fall" target="_blank" rel="noreferrer">NYS Comptroller: Housing Permits and Growth Risk</a>
+        <a href="https://council.nyc.gov/press/2025/06/10/2899/" target="_blank" rel="noreferrer">NYC Council: CityFHEPS Operational Problems</a>
+        <a href="https://advocatesforchildren.org/wp-content/uploads/2025/student_homelessness_2024-25.pdf" target="_blank" rel="noreferrer">Advocates for Children: Student Homelessness 2024-25</a>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-top" type="button" data-back-top aria-label="Back to top">↑</button>
+  <script src="housing-crisis.js"></script>
+</body>
+</html>
